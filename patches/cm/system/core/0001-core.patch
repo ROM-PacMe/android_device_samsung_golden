@@ -141,7 +141,7 @@ index 58d7d34..402c2c5 100644
          { "ro.boot.baseband",   "ro.baseband",   "unknown", },
          { "ro.boot.bootloader", "ro.bootloader", "unknown", },
 -        { "ro.boot.hardware",   "ro.hardware",   "unknown", },
-+        { "ro.boot.hardware",   "ro.hardware",   "samsungcodina", },
++        { "ro.boot.hardware",   "ro.hardware",   "samsunggolden", },
  #ifndef IGNORE_RO_BOOT_REVISION
          { "ro.boot.revision",   "ro.revision",   "0", },
  #endif
@@ -149,7 +149,7 @@ index 58d7d34..402c2c5 100644
      import_kernel_cmdline(false, import_kernel_nv);
      if (qemu[0])
          import_kernel_cmdline(true, import_kernel_nv);
-+    property_set("ro.boot.hardware","samsungcodina");
++    property_set("ro.boot.hardware","samsunggolden");
  }
  
  static int queue_property_triggers_action(int nargs, char **args)
