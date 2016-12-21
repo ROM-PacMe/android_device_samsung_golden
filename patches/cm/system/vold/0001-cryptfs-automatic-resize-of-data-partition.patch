@@ -4,8 +4,8 @@ Date: Thu, 4 Aug 2016 09:35:49 -0500
 Subject: [PATCH] cryptfs: automatic resize of data partition.
 
 -this automatically resizes the data partition
-"/dev/block/mmcblk0p25" from 383995 (4k) blocks
-to 383991 blocks. The gives us the 16k blocks
+"/dev/block/mmcblk0p25" from 1236480 (4k) blocks
+to 1236476 blocks. The gives us the 16k blocks
 we need for the crypto footer.
 
 Change-Id: Ibbad64d7c92a5cece9ab9a6775e79120566f3717
@@ -54,7 +54,7 @@ index c8ad321..d8ad6c5 100755
 +	    SLOGI("e2fsck succeeded!");
 +	}
 +	i = 0;
-+    	while(system("/system/bin/sh -c '/system/bin/resize2fs /dev/block/mmcblk0p25 383991'") != 0 && i < 20) {
++    	while(system("/system/bin/sh -c '/system/bin/resize2fs /dev/block/mmcblk0p25 1236476'") != 0 && i < 20) {
 +	   sleep(1);
 +	   i++;
 +	}
