@@ -176,11 +176,18 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    lights.montblanc
+    lights.montblanc \
+    sensors.montblanc
 
 # Power
 PRODUCT_PACKAGES += \
     power.montblanc
+
+# Other libs
+PRODUCT_PACKAGES += \
+    copybit.montblanc \
+    gralloc.montblanc \
+    hwcomposer.montblanc
 
 # Enable repeatable keys in cwm
 PRODUCT_PROPERTY_OVERRIDES += \
