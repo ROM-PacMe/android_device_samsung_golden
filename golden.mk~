@@ -30,6 +30,7 @@ $(call inherit-product-if-exists, vendor/samsung/golden/golden-vendor.mk)
 
 #Releasetools
 PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/blobinstaller.sh:blobinstaller.sh \
 	$(LOCAL_PATH)/restorecon.sh:restorecon.sh
 
 # Ramdisk
@@ -176,7 +177,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    lights.montblanc
+    lights.montblanc \
+    sensors.montblanc
 
 # Power
 PRODUCT_PACKAGES += \
