@@ -178,20 +178,11 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     lights.montblanc \
-<<<<<<< HEAD:golden.mk~
     sensors.montblanc
 
 # Power
 PRODUCT_PACKAGES += \
     power.montblanc
-=======
-    sensors.montblanc \
-    power.montblanc \
-    copybit.montblanc \
-    gralloc.montblanc \
-    hwcomposer.montblanc \
-    libstelpcutils
->>>>>>> 00d6f31... opensource: libstelpcutils:codinalte.mk
 
 # Enable repeatable keys in cwm
 PRODUCT_PROPERTY_OVERRIDES += \
