@@ -279,3 +279,12 @@ PRODUCT_COPY_FILES += \
         device/samsung/golden/initd/25loopy_smoothness_tweak:system/etc/init.d/25loopy_smoothness_tweak \
         device/samsung/golden/initd/98tweaks:system/etc/init.d/98tweaks
 
+# new opensource libs
+PRODUCT_PACKAGES += \
+    gralloc.montblanc \
+    hwcomposer.montblanc \
+    copybit.montblanc \
+    sensors.montblanc \
+    libstelpcutils \
+    libste_omxil-interface \
+    libnmf
