@@ -1,2 +1,6 @@
 rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/ttyS0
+
+# Instagram video upload fix
+ste.use_google_h264_encoder=true
+#ste.use_ffmpeg_h264_encoder=true
