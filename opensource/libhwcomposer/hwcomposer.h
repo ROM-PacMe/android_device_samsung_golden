@@ -24,7 +24,7 @@
 #include <hardware/hardware.h>
 #include <cutils/native_handle.h>
 
-#include <hardware/hwcomposer_defs.h>
+#include "hwcomposer_defs.h"
 
 __BEGIN_DECLS
 
@@ -661,7 +661,7 @@ static inline int hwc_close_1(hwc_composer_device_1_t* device) {
 /*****************************************************************************/
 
 #if !HWC_REMOVE_DEPRECATED_VERSIONS
-#include <hardware/hwcomposer_v0.h>
+#include "hwcomposer_v0.h"
 #endif
 
 __END_DECLS
