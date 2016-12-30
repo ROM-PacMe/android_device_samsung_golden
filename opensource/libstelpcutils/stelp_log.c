@@ -36,6 +36,8 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 
+#include <errno.h>
+
 #define STE_DEBUG_DIR "/data/ste-debug"
 #define DUMPER_DIR STE_DEBUG_DIR "/dump"
 #define SUMMARY_HEADER "################################################################################"
