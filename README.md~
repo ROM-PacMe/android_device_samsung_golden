@@ -1,5 +1,35 @@
-# CyanogenMod 13.0 for Galaxy S3 Mini (golden)
+# Carbon ROM (KitKat) for the Galaxy Exhibit / Ace 2e (golden)
+This device tree can build for one or all of these three devices:
+
+1. Samsung Galaxy Exhibit T599 (T-Mobile) AKA: codinatmo
+2. Samsung Galaxy Exhibit T599N (MetroPCS)AKA: codinanewcotmo AKA: codinamtr
+3. Samsung Galaxy Ace 2e (VideoTron? Wind?) AKA: codinavid
+
+### Kernel
+This device tree is intended to be used with this kernel repo:
+
+See: https://github.com/Meticulus/android_kernel_samsung_codina
+
+branch: kk44
+### Vendor
+This device tree is intented to be used with one or all of these vendor repos:
+
+codinatmo
+See: https://github.com/Meticulus/android_vendor_samsung_codinatmo
+
+branch: kk44
+
+codinamtr
+See: https://github.com/Meticulus/android_vendor_samsung_codinamtr
+
+branch: kk44
+
+codinavid
+See: https://github.com/Meticulus/android_vendor_samsung_codinavid
+
+branch: kk44
 # How To Build
+
 ### Step 1: Setting up the Build Environment.
 
 You'll need Linux to be able to build Carbon ROM. You have three choices here; you can:
@@ -42,13 +72,13 @@ gedit /home/$USER/carbon/.repo/local_manifests/golden.xml
 Assuming you want to build for all three devices copy the following into golden.xml, save and close. If not remove the "vendor" trees for the devices you don't want.
 ```bash
 <?xml version="1.0" encoding="UTF-8"?>
-   <manifest>
-     <project name="CyanogenMod/android_external_stlport" remote="github" path="external/stlport" revision="cm-13.0" />
-     <project name="CyanogenMod/android_external_stlport" remote="github" path="external/stlport" revision="cm-13.0" />
-     <project name="3liteking148/android_device_samsung_golden" path="device/samsung/golden" remote="github" revision="cm-13.0"/>
-     <project name="3liteking148/android_kernel_samsung_golden" path="kernel/samsung/golden" remote="github" revision="cm-13.0"/>
-     <project name="3liteking148/android_vendor_samsung_golden" path="vendor/samsung/golden" remote="github" revision="cm-13.0"/>
-   </manifest>
+<manifest>
+  <project name="Meticulus/android_kernel_samsung_codina" path="kernel/samsung/codina" remote="cm" revision="kk44"/>
+  <project name="Meticulus/android_device_samsung_golden" path="device/samsung/golden" remote="cm" revision="carbon"/>
+  <project name="Meticulus/android_vendor_samsung_codinatmo" path="vendor/samsung/codinatmo" remote="cm" revision="kk44"/>
+  <project name="Meticulus/android_vendor_samsung_codinamtr" path="vendor/samsung/codinamtr" remote="cm" revision="kk44"/>
+  <project name="Meticulus/android_vendor_samsung_codinavid" path="vendor/samsung/codinavid" remote="cm" revision="kk44"/>
+</manifest>
 ```
 Execute the following commands in a linux terminal:
 ```bash

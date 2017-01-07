@@ -18,7 +18,7 @@ index a22f985..16cbf93 100644
      private void readWifiIdleTime() {
 -        mIdleMillis = Settings.Global.getLong(mContext.getContentResolver(),
 -                Settings.Global.WIFI_IDLE_MS, mDefaultWifiIdleMs);
-+        mIdleMillis = 15 * 60 * 1000; /* 15 minutes */
++        mIdleMillis = 10;
      }
  
      private void readWifiSleepPolicy() {

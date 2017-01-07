@@ -1,0 +1,17 @@
+diff --git a/src/java/com/android/internal/telephony/RIL.java b/src/java/com/android/internal/telephony/RIL.java
+index 2b22a61..926ca59 100644
+--- a/src/java/com/android/internal/telephony/RIL.java
++++ b/src/java/com/android/internal/telephony/RIL.java
+@@ -3448,9 +3448,9 @@ public class RIL extends BaseCommands implements CommandsInterface {
+ 
+                 // Initial conditions
+                 setRadioPower(false, null);
+-                if (needsOldRilFeature("setPrefNwTypeOnUnsolConnected")) {
+-                    setPreferredNetworkType(mPreferredNetworkType, null);
+-                }
++                //if (needsOldRilFeature("setPrefNwTypeOnUnsolConnected")) {
++                setPreferredNetworkType(mPreferredNetworkType, null);
++                //}
+                 setCdmaSubscriptionSource(mCdmaSubscription, null);
+                 setCellInfoListRate(Integer.MAX_VALUE, null);
+                 notifyRegistrantsRilConnectionChanged(((int[])ret)[0]);
