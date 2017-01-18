@@ -117,6 +117,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ste.cam.back.orientation=90 \
     ste.cam.ext.cfg.path.secondary=/system/usr/share/camera/config_file/aptina_mt9v113.dat
 
+PRODUCT_PACKAGES += \
+    Snap
+
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -146,6 +149,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/etc/cspsa.conf:system/etc/cspsa.conf
 
 PRODUCT_PACKAGES += \
+    Stk \
     libstlport \
     libjhead \
     libjhead_jni
@@ -252,35 +256,9 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# init.d scripts for performance
-PRODUCT_COPY_FILES += \
-        device/samsung/golden/initd/init.d.cfg:system/etc/init.d.cfg \
-        device/samsung/golden/initd/00check:system/etc/init.d/00check \
-        device/samsung/golden/initd/01zipalign:system/etc/init.d/01zipalign \
-        device/samsung/golden/initd/02sysctl:system/etc/init.d/02sysctl \
-        device/samsung/golden/initd/03firstboot:system/etc/init.d/03firstboot \
-        device/samsung/golden/initd/05freemem:system/etc/init.d/05freemem \
-        device/samsung/golden/initd/06removecache:system/etc/init.d/06removecache \
-        device/samsung/golden/initd/07fixperms:system/etc/init.d/07fixperms \
-        device/samsung/golden/initd/09cron:system/etc/init.d/09cron \
-        device/samsung/golden/initd/10sdboost:system/etc/init.d/10sdboost \
-        device/samsung/golden/initd/11battery:system/etc/init.d/11battery \
-        device/samsung/golden/initd/12touch:system/etc/init.d/12touch \
-        device/samsung/golden/initd/13minfree:system/etc/init.d/12minfree \
-        device/samsung/golden/initd/14gpurender:system/etc/init.d/14gpurender \
-        device/samsung/golden/initd/15sleepers:system/etc/init.d/15sleepers \
-        device/samsung/golden/initd/16journalism:system/etc/init.d/16journalism \
-        device/samsung/golden/initd/17sqlite3:system/etc/init.d/17sqlite3 \
-        device/samsung/golden/initd/18wifisleep:system/etc/init.d/18wifisleep \
-        device/samsung/golden/initd/19iostats:system/etc/init.d/19iostats \
-        device/samsung/golden/initd/20setrenice:system/etc/init.d/20setrenice \
-        device/samsung/golden/initd/21tweaks:system/etc/init.d/21tweaks \
-        device/samsung/golden/initd/24speedy_modified:system/etc/init.d/24speedy_modified \
-        device/samsung/golden/initd/25loopy_smoothness_tweak:system/etc/init.d/25loopy_smoothness_tweak \
-        device/samsung/golden/initd/98tweaks:system/etc/init.d/98tweaks
-
 # new opensource libs
 PRODUCT_PACKAGES += \
+    gralloc.montblanc \
     hwcomposer.montblanc \
     copybit.montblanc \
     libstelpcutils \
