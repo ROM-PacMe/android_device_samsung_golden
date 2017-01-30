@@ -1,0 +1,27 @@
+diff --git a/config/common.mk b/config/common.mk
+index 5671283..1ab0235 100644
+--- a/config/common.mk
++++ b/config/common.mk
+@@ -116,12 +116,10 @@ PRODUCT_PACKAGES += \
+ # Custom CM packages
+ PRODUCT_PACKAGES += \
+     Trebuchet \
+-    AudioFX \
+     CMWallpapers \
+     CMFileManager \
+     Eleven \
+     LockClock \
+-    CMUpdater \
+     CyanogenSetupWizard \
+     CMSettingsProvider \
+     ExactCalculator \
+@@ -129,8 +127,7 @@ PRODUCT_PACKAGES += \
+     WeatherProvider \
+     DataUsageProvider \
+     WallpaperPicker \
+-    SoundRecorder \
+-    Screencast
++    SoundRecorder
+ 
+ # Exchange support
+ PRODUCT_PACKAGES += \

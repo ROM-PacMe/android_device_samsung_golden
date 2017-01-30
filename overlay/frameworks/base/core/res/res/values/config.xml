@@ -119,5 +119,7 @@
   
     <bool name="config_enableWifiDisplay">true</bool>
 
+    <bool name="config_useSystemClockforRotationSensor">true</bool>
+
 </resources>
 
