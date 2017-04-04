@@ -17,7 +17,6 @@
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/golden/include
 TARGET_OTA_ASSERT_DEVICE := golden,i8190,GT-I8190
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 # Board
 TARGET_BOOTLOADER_BOARD_NAME := DB8520H
 TARGET_NO_BOOTLOADER := true
@@ -37,9 +36,11 @@ TARGET_CPU_SMP := true
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 ARCH_ARM_HAVE_NEON := true
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-linux-androideabi-
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1258291200
