@@ -16,14 +16,14 @@
 #
 
 # Inherit CM common Phone stuff.
-$(call inherit-product-if-exists, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product-if-exists, vendor/glaze/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/golden/golden.mk)
 
 # Device identifier
 PRODUCT_DEVICE := golden
-PRODUCT_NAME := cm_golden
+PRODUCT_NAME := glaze_golden
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := GT-I8190
 PRODUCT_MANUFACTURER := samsung
